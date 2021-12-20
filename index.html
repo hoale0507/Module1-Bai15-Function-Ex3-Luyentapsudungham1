@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập tạo và sử dụng hàm 01</title>
+</head>
+<body>
+<script>
+    // Bài 1:
+    function alertMessage(message){
+        alert(message);
+    }
+    // alertMessage("xin chào")
+
+    // Bài 2: Tạo hàm nhận vào một đối số dạng số, tăng giá trị đối số đó lên 1 và trả lại giá trị cho lời gọi hàm.
+    //  Gọi hàm từ trong phần <body> của trang web và hiển thị kết quả lên màn hình.
+    function addOne(number){
+        number++;
+        return number;
+    }
+    let result = addOne(1);
+    console.log(result);
+    // Bài 3: Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai,
+    //     hiển thị  hộp thoại thông báo cho người dùng. Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng
+    // tham số thứ hai, trả về tổng của hai tham số.
+    function cal(a,b) {
+        if (a > b) {
+            console.log(a + ">" + b);
+        } else {
+            let sum = a + b;
+            return sum;
+        }
+    }
+    cal(2,1);
+
+
+    function addNumbers() {
+        let firstNum = 4;
+        let secondNum = 8;
+        let result = firstNum + secondNum;
+        console.log(result);
+        return result;
+
+    }
+    let result1 = 0;
+    result1 = addNumbers();
+    console.log(result1);
+
+
+
+    // Bài 5:
+
+    let arr1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let arr2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    function check(star){
+        if(arr1.indexOf(star) !== -1){
+            alert(arr2[arr1.indexOf(star)]);
+            return arr2[arr1.indexOf(star)];
+        } else {
+            alert(star + " not found");
+        }
+    }
+    let star = prompt("Enter a star!");
+    check(star);
+
+
+</script>
+</body>
+</html>
